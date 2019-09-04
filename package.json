@@ -1,0 +1,27 @@
+{
+  "name": "jacket-pocket-backend",
+  "version": "1.0.0",
+  "description": "capstone requirement",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnhill13/jacket-pocket-backend.git"
+  },
+  "author": "john",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnhill13/jacket-pocket-backend/issues"
+  },
+  "homepage": "https://github.com/johnhill13/jacket-pocket-backend#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.12",
+    "node": "^12.9.1",
+    "session": "^0.1.0"
+  }
+}
