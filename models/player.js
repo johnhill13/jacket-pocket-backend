@@ -6,6 +6,6 @@ const PlayerSchema = new Schema({
     score: Number,
 });
 
-const PlayerSchema = mongoose.model('Player', PlayerSchema);
+const Player = mongoose.model('Player', PlayerSchema);
 
 module.exports = Player;
