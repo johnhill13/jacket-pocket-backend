@@ -7,7 +7,8 @@ const RoundSchema = new Schema({
     playerAnswers: {
         input: String,
         players: {
-            type: Schema.Types.playerid
+            type: Schema.Types.ObjectId,
+            refs: 'Player'
         }
     }
 });
