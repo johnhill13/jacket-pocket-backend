@@ -7,11 +7,11 @@ const GameSchema = new Schema({
     players: Array,
     round: {
         type: Schema.Types.ObjectId,
-        ref: 'round'
+        ref: 'Round'
     }
 })
 
 const GameSchema = mongoose.model('Game', GameSchema);
 
-module.exports = GameSchema;
+module.exports = Game;
 
