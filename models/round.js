@@ -14,7 +14,7 @@ const Response = mongoose.model('Response', ResponseSchema);
 const RoundSchema = new Schema({
     question: String,
     responses: [Response.schema],
-    answers: []
+    answers: [String]
 
 });
 
