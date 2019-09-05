@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const GameSchema = new Schema({
     time: Number,
-    players: Array,
+    players: [],
     round: {
         type: Schema.Types.ObjectId,
         ref: 'Round'

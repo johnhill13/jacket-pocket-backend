@@ -8,7 +8,7 @@ module.exports = {
   create: (req ,res) => {
     const newGame = req.body;
   
-    db.Game.create(newGame, (err, createdGame) => {
+    db.game.create(newGame, (err, createdGame) => {
       if (err) return res.status(400).json({
         status: 400,
         message: 'Something went wrong, please try again'});

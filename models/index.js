@@ -6,8 +6,8 @@ mongoose.connect(DB_URL, {useNewUrlParser: true, useFindAndModify: false })
     .catch((err) => console.log(err));
 
 module.exports = {
-    game: require('./Game'),
-    player: require('./Player'),
-    round: require('./Round'),
+    Game: require('./Game'),
+    Player: require('./Player'),
+    Round: require('./Round'),
 
 }
