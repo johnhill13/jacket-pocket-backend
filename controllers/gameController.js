@@ -19,7 +19,8 @@ module.exports = {
         requestedAt: getTime(),
       });
     });
-  },
+  
+  }
 
 //   delete: (req, res) => {
 //     db.Game.findByIdAndDelete(req.params.game_id, (err, deletedGame) => {

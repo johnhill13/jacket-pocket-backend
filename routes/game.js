@@ -10,6 +10,8 @@ const gameController = require('../controllers').game;
 // Create Game
 router.post('/', gameController.create);
 
+// router.get('/', gameController.show);
+
 // Show Game
 // router.get('/:game_id', gameController.show);
 
