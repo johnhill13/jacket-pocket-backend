@@ -38,7 +38,7 @@ module.exports = {
     },
     show: (req ,res) => {
         const showPlayer = req.body;
-        db.Player.create(showPlayer, (err, showPlayer) => {
+        db.Player.findById(req.params.player_id, (err, showPlayer) => {
             if (err) return res.status(400).json({
                 status: 400,
                 message: 'Something went wrong, please try again'});
