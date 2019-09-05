@@ -54,18 +54,29 @@ module.exports = {
     update: (req ,res) => {
         // console.log('hello there udpating')
         const updateRound = req.body;
-        db.Round.findByIdAndUpdate(req.params.round_id, updateRound, {new:true}, (err, updatedRound) => {
+        db.Round.findById(req.params.round_id, (err, foundRound) => {
             if (err) return res.status(400).json({
                 status: 400,
                 message: 'Something went wrong, please try again'});
 
-                res.status(201).json({
-                status: 201,
-                data: updatedRound,
-                message: 'updating it',
-                requestedAt: getTime(),
+                db.Response.create(updateRound, (err, createdResponse) => {
+                    if (err) return res.status(400).json({
+                        status: 400,
+                        message: 'Something went wrong, please try again'});                        
+
+                    foundRound.responses.push(createdResponse)
+                    foundRound.save()                       
+                
+                    res.status(201).json({
+                    status: 201,
+                    data: foundRound,
+                    message: 'updating it',
+                    requestedAt: getTime(),
+                    });
                 });
-        });
+                
+            })
+                
     },
     delete: (req ,res) => {
         const deleteRound = req.body;
