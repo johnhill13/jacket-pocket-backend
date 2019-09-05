@@ -10,6 +10,9 @@ const playerController = require('../controllers').player;
 // Create Player
 router.post('/', playerController.create);
 
+// Index Players
+router.get('/', playerController.index);
+
 // Update Player
 router.put('/:player_id', playerController.update);
 

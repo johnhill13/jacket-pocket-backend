@@ -1,16 +1,21 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const RoundSchema = new Schema({
-    questions: Array,
-    answers: Array,
-    playerAnswers: {
-        input: String,
-        players: {
-            type: Schema.Types.ObjectId,
-            refs: 'Player'
-        }
+const ResponseSchema = new Schema({
+    input: String,
+    player: {
+        type: Schema.Types.ObjectId,
+        refs: 'Player'
     }
+})
+
+const Response = mongoose.model('Response', ResponseSchema);
+
+const RoundSchema = new Schema({
+    question: String,
+    responses: [Response.schema],
+    answers: []
+
 });
 
 

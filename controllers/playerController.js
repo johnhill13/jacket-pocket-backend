@@ -5,9 +5,25 @@ function getTime() {
 };
 
 module.exports = {
+    index: (req ,res) => {
+        const allPlayers = req.body;
+        db.Player.find({}, (err, allPlayers) => {
+            if (err) return res.status(400).json({
+                status: 400,
+                message: 'Something went wrong, please try again'});
+
+                res.status(201).json({
+                status: 201,
+                numberOfResults: allPlayers.length,
+                data: allPlayers,
+                message: 'found all',
+                requestedAt: getTime(),
+                });
+        });
+    },
     create: (req ,res) => {
         const newPlayer = req.body;
-        db.player.create(newPlayer, (err, createdPlayer) => {
+        db.Player.create(newPlayer, (err, createdPlayer) => {
             if (err) return res.status(400).json({
                 status: 400,
                 message: 'Something went wrong, please try again'});
@@ -15,13 +31,14 @@ module.exports = {
                 res.status(201).json({
                 status: 201,
                 data: createdPlayer,
+                message: 'creating it',
                 requestedAt: getTime(),
                 });
         });
     },
     show: (req ,res) => {
-        const newPlayer = req.body;
-        db.player.create(newPlayer, (err, showPlayer) => {
+        const showPlayer = req.body;
+        db.Player.create(showPlayer, (err, showPlayer) => {
             if (err) return res.status(400).json({
                 status: 400,
                 message: 'Something went wrong, please try again'});
@@ -29,13 +46,15 @@ module.exports = {
                 res.status(201).json({
                 status: 201,
                 data: showPlayer,
+                message: 'showing it',
                 requestedAt: getTime(),
                 });
         });
     },
     update: (req ,res) => {
+        // console.log('hello there udpating')
         const updatePlayer = req.body;
-        db.player.findByIdAndUpdate(req.params.player_id, (err, updatedPlayer) => {
+        db.Player.findByIdAndUpdate(req.params.player_id, updatePlayer, {new:true}, (err, updatedPlayer) => {
             if (err) return res.status(400).json({
                 status: 400,
                 message: 'Something went wrong, please try again'});
@@ -43,13 +62,14 @@ module.exports = {
                 res.status(201).json({
                 status: 201,
                 data: updatedPlayer,
+                message: 'updating it',
                 requestedAt: getTime(),
                 });
         });
     },
     delete: (req ,res) => {
         const deletePlayer = req.body;
-        db.player.findByIdAndDelete(req.params.player_id, (err, deletedPlayer) => {
+        db.Player.findByIdAndDelete(req.params.player_id, (err, deletedPlayer) => {
             if (err) return res.status(400).json({
                 status: 400,
                 message: 'Something went wrong, please try again'});
@@ -57,6 +77,7 @@ module.exports = {
                 res.status(201).json({
                 status: 201,
                 data: deletedPlayer,
+                message: 'deleting it',
                 requestedAt: getTime(),
                 });
         });

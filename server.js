@@ -9,6 +9,7 @@ const routes = require('./routes');
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
-app.use('/api/v1/jacket/', routes.game)
+app.use('/api/v1/game/', routes.game)
+app.use('/api/v1/player/', routes.player)
 
 app.listen(PORT, () => console.log(`Server is running at http://localhost:${PORT}`))
