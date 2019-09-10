@@ -9,32 +9,17 @@
     "Screwy" : ["Barrack Obama", "Michael Jordan", "Tom Cruise", "Florence Griffith-Joyner", "Brent"]
 },
 {
-    "Question" : "",
-    "Answer" : "Usain Bolt",
-    "Screwy" : ["Barrack Obama", "Michael Jordan", "Tom Cruise", "Florence Griffith-Joyner", "Brent"]
+    "Question" : "Tallest building in SF",
+    "Answer" : "Salesforce Tower",
+    "Screwy" : ["Transamerica Pyramid", "Millenium Tower", "Tom Cruise", "Standard Oil Building"]
 },
 {
-    "Question" : "Who is the fastest runner alive?",
-    "Answer" : "Usain Bolt",
-    "Screwy" : ["Barrack Obama", "Michael Jordan", "Tom Cruise", "Florence Griffith-Joyner", "Brent"]
+    "Question" : "Fastest bird",
+    "Answer" : "Peregrine Falcon",
+    "Screwy" : ["Penguin", "Chicken", "Golden Finch", "Mustang"]
 },
 {
-    "Question" : "Who is the fastest runner alive?",
-    "Answer" : "Usain Bolt",
-    "Screwy" : ["Barrack Obama", "Michael Jordan", "Tom Cruise", "Florence Griffith-Joyner", "Brent"]
-},
-{
-    "Question" : "Who is the fastest runner alive?",
-    "Answer" : "Usain Bolt",
-    "Screwy" : ["Barrack Obama", "Michael Jordan", "Tom Cruise", "Florence Griffith-Joyner", "Brent"]
-},
-{
-    "Question" : "Who is the fastest runner alive?",
-    "Answer" : "Usain Bolt",
-    "Screwy" : ["Barrack Obama", "Michael Jordan", "Tom Cruise", "Florence Griffith-Joyner", "Brent"]
-},
-{
-    "Question" : "Who is the fastest runner alive?",
-    "Answer" : "Usain Bolt",
-    "Screwy" : ["Barrack Obama", "Michael Jordan", "Tom Cruise", "Florence Griffith-Joyner", "Brent"]
+    "Question" : "Largest whale",
+    "Answer" : "Blue Whale",
+    "Screwy" : ["Grey Whale", "Beluga Whale", "Humpback Whale", "Orca"]
 }]
