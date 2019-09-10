@@ -13,7 +13,7 @@ router.post('/', gameController.create);
 // router.get('/', gameController.show);
 
 // Show Game
-// router.get('/:game_id', gameController.show);
+router.get('/:game_id', gameController.show);
 
 // Destroy Game
 // router.delete('/:game_id', gameController.delete);

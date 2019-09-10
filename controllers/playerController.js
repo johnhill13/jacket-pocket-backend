@@ -23,6 +23,7 @@ module.exports = {
     },
     create: (req ,res) => {
         const newPlayer = req.body;
+        console.log(req);
         db.Player.create(newPlayer, (err, createdPlayer) => {
             if (err) return res.status(400).json({
                 status: 400,
@@ -52,7 +53,6 @@ module.exports = {
         });
     },
     update: (req ,res) => {
-        // console.log('hello there udpating')
         const updatePlayer = req.body;
         db.Player.findByIdAndUpdate(req.params.player_id, updatePlayer, {new:true}, (err, updatedPlayer) => {
             if (err) return res.status(400).json({
