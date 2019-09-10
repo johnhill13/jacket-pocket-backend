@@ -65,14 +65,19 @@ module.exports = {
                         message: 'Something went wrong, please try again'});                        
 
                     foundRound.responses.push(createdResponse)
-                    foundRound.save()                       
+                    foundRound.save(()=>{
+                        db.Game.findById(req.body.game).populate('rounds players').exec((err, foundGame) => {
+                            res.status(201).json({
+                            status: 201,
+                            data: foundGame,
+                            message: 'updating it',
+                            requestedAt: getTime(),
+                            });
+                            
+                        })   
+                    })
+                                        
                 
-                    res.status(201).json({
-                    status: 201,
-                    data: foundRound,
-                    message: 'updating it',
-                    requestedAt: getTime(),
-                    });
                 });
                 
             })

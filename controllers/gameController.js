@@ -14,19 +14,18 @@ module.exports = {
         message: 'Something went wrong, please try again'});
 
         createdGame.players.push(player)
-        createdGame.save()
 
         const round = {question: "this is a question", answers: ["answer 1", "answer 2"]}
         db.Round.create(round, (err, createdRound) => {
           if (err) return res.status(400).json({
             status: 400,
             message: 'Something went wrong, please try again'});    
-    
+            
             // this is possibly where changes dalton
-            // loops multiple times to create round with games
-            // db.round.create(round)
+              // loops multiple times to create round with games
+              // db.round.create(round)
             createdGame.rounds.push(createdRound)
-            createdGame.save
+            createdGame.save()
     
           res.status(201).json({
             status: 201,
