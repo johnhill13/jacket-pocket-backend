@@ -1,25 +1,25 @@
 [{
-    "Question" : "What color would borccli be if it were on Jupiter?",
-    "Answer" : "Probably, green",
+    "question" : "What color would broccoli be if it were on Jupiter?",
+    "answers" : ["Probably, green"],
     "Screwy" : ["Blue", "Plaid", "Rainbow", "None", "Who"]
 },
 {
-    "Question" : "Who is the fastest runner alive?",
-    "Answer" : "Usain Bolt",
+    "question" : "Who is the fastest runner alive?",
+    "answers" : ["Usain Bolt"],
     "Screwy" : ["Barrack Obama", "Michael Jordan", "Tom Cruise", "Florence Griffith-Joyner", "Brent"]
 },
 {
-    "Question" : "Tallest building in SF",
-    "Answer" : "Salesforce Tower",
+    "question" : "Tallest building in SF",
+    "answers" : ["Salesforce Tower"],
     "Screwy" : ["Transamerica Pyramid", "Millenium Tower", "Tom Cruise", "Standard Oil Building"]
 },
 {
-    "Question" : "Fastest bird",
-    "Answer" : "Peregrine Falcon",
+    "question" : "Fastest bird",
+    "answers" : ["Peregrine Falcon"],
     "Screwy" : ["Penguin", "Chicken", "Golden Finch", "Mustang"]
 },
 {
-    "Question" : "Largest whale",
-    "Answer" : "Blue Whale",
+    "question" : "Largest whale",
+    "answers" : ["Blue Whale"],
     "Screwy" : ["Grey Whale", "Beluga Whale", "Humpback Whale", "Orca"]
 }]

@@ -1,5 +1,7 @@
 const db = require('../models');
 
+const data = require('../seed.json')
+
 function getTime() {
   return new Date().toLocaleString();
 };
@@ -15,7 +17,10 @@ module.exports = {
 
         createdGame.players.push(player)
 
-        const round = {question: "this is a question", answers: ["answer 1", "answer 2"]}
+
+        //this is where this is 
+        const round = data[Math.floor(Math.random() * data.length)] 
+        console.log(data)
         db.Round.create(round, (err, createdRound) => {
           if (err) return res.status(400).json({
             status: 400,
