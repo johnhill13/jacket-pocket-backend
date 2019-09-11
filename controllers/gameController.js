@@ -58,18 +58,18 @@ module.exports = {
     });
 },
 
-//   delete: (req, res) => {
-//     db.Game.findByIdAndDelete(req.params.game_id, (err, deletedGame) => {
-//       if (err) return res.status(400).json({
-//         status: 400,
-//         message: 'Something went wrong, please try again',
-//       });
+  delete: (req, res) => {
+    db.Game.findByIdAndDelete(req.params.game_id, (err, deletedGame) => {
+      if (err) return res.status(400).json({
+        status: 400,
+        message: 'Something went wrong, please try again',
+      });
   
-//       console.log(deletedGame);
-//       res.status(200).json({
-//         status: 200,
-//         message: 'Success',
-//       });
-//     });
-//   },
+      console.log(deletedGame);
+      res.status(200).json({
+        status: 200,
+        message: 'Success',
+      });
+    });
+  },
 };

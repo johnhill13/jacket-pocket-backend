@@ -16,6 +16,6 @@ router.post('/', gameController.create);
 router.get('/:game_id', gameController.show);
 
 // Destroy Game
-// router.delete('/:game_id', gameController.delete);
+router.delete('/:game_id', gameController.delete);
 
 module.exports = router;
