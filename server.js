@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 const corsOptions = {
     // origin: ['http://localhost:3000'],
-    origin: ['https://jacket-pocket.herokuapp.com'],
+    origin: ['http://jacket-pocket.herokuapp.com'],
     credentials: false,
     optionsSuccessStatus: 200
   }
