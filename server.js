@@ -9,8 +9,8 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
 const corsOptions = {
-    origin: ['http://localhost:3000'],
-    // origin: ["https://jacket-pocket.herokuapp.com"],
+    // origin: ['http://localhost:3000'],
+    origin: ["https://jacket-pocket.herokuapp.com"],
     methods: ["GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS"],
     headers: ["Origin", "X-Requested-With", "Content-Type", "Accept"],
     credentials: false,
@@ -18,7 +18,7 @@ const corsOptions = {
   }
 
 app.use(cors(corsOptions));
-app.options('https://jacket-pocket.herokuapp.com', cors());
+app.options("https://jacket-pocket.herokuapp.com", cors());
 
 
 app.use('/api/v1/player/', routes.player)
