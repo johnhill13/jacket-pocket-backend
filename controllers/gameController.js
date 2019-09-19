@@ -6,7 +6,7 @@ function getTime() {
   return new Date().toLocaleString();
 };
 
-module.exports = {
+module.exports = { 
   create: (req ,res) => {
     const player = req.body.player
   

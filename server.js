@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const session = require('express-session');
 const app = express();
 const cors = require('cors');
 const PORT = process.env.PORT || 4001;
@@ -10,8 +9,8 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
 const corsOptions = {
-    // origin: ['http://localhost:3000'],
-    origin: 'https://jacket-pocket.herokuapp.com',
+    origin: ['http://localhost:3000'],
+    // origin: ["https://jacket-pocket.herokuapp.com"],
     methods: ["GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS"],
     headers: ["Origin", "X-Requested-With", "Content-Type", "Accept"],
     credentials: false,
